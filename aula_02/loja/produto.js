@@ -6,10 +6,11 @@ class Produto {
     constructor(nome, preco) {
         this.#nome = nome;
         this.#preco = preco;
+        Object.freeze(this);
     }
 
     get getNome() {
-        return this.nome;
+        return this.#nome;
     }
 
     set setNome(nome) {
