@@ -1,9 +1,9 @@
 const { Veiculo } = require('../models/veiculo'); // importa o módulo veiculo
 const { Carro } = require('../models/carro');   // importa o módulo carro
-const { Moto } = require('../models/moto');     
+const { Moto } = require('../models/moto');     // importa o módulo moto
 const bancoVeiculos = [];   // cria um array vazio
 
-class veiculoController {
+class veiculoController { // 
 
     criarVeiculo(ano, marca, modelo, cor, tipo){ // método para criar um veículo
 
