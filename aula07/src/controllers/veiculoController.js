@@ -39,7 +39,7 @@ class veiculoController { //
         }
         }
     buscarId(indice){
-    if (bancoVeiculos.length >= indice -1){ // verifica se o índice é válido
+    if (bancoVeiculos.length >= indice >1){ // verifica se o índice é válido
         return true; // retorna verdadeiro
     }
         return falso;  // retorna falso
