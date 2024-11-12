@@ -35,8 +35,8 @@ function iniciarSistema (){
 }
 
 function adicionarVeiculo(){
-    const tipo = prompt('Informe o tipo de veículo (Carro, Moto ou Veiculo): ');
-    const ano = parseInt(prompt('Informe o ano do veículo: '));
+    const tipo = prompt('Informe o tipo de veículo (Carro, Moto ou Veiculo): '); 
+    const ano = parseInt(prompt('Informe o ano do veículo: ')); 
     const marca = prompt('Informe a marca do veículo: ');
     const modelo = prompt('Informe o modelo do veículo: ');
     const cor = prompt('Informe a cor do veículo: ');
