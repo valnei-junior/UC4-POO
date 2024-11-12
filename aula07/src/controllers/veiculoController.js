@@ -5,6 +5,8 @@ const bancoVeiculos = [];   // cria um array vazio
 
 class veiculoController { // 
 
+
+
     criarVeiculo(ano, marca, modelo, cor, tipo){ // método para criar um veículo
 
         let veiculo;
@@ -32,12 +34,48 @@ class veiculoController { //
                 veiculo.getInfo(); // chama o método getInfo() do veículo
                 veiculo.calculaValor(); // chama o método calculaValor() do veículo
             });
-
         } else{  // se o array estiver vazio
             console.log('Nenhum veículo registrado'); // imprime a mensagem
         }
         }
+    buscarId(indice){
+    if (bancoVeiculos.length >= indice -1){ // verifica se o índice é válido
+        return true; // retorna verdadeiro
     }
+        return falso;  // retorna falso
+}
+    editaVeiculo(indice, novosDados){
+            // verifica se o veículo não foi encontrado
+           
+            const novoVeiculo = bancoVeiculos[indice -1]; // busca o veículo
+           
+            if (novosDados.ano){  // verifica se a marca foi informada
+                novoVeiculo.setAno = novosDados.ano; // atribui a nova marca
+            }
+            if (novosDados.Marca){    // verifica se o ano foi informado
+                novoVeiculo.setMarca = novosDados.marca; // atribui o novo ano
+            }
+            if (novosDados.modelo){ // verifica se o modelo foi informado
+                novoVeiculo.setModelo = novosDados.modelo; // atribui o novo modelo
+            }
+            if (novosDados.cor){    // verifica se a cor foi informada
+                novoVeiculo.setCor = novosDados.cor; // atribui a nova cor
+            }
+            if (novosDados.tipo){   // verifica se o tipo foi informado
+                novoVeiculo.setTipo =novosDados.tipo; // atribui o novo tipo
+            }
+            console.log('Veículo editado com sucesso!!!'); // imprime a mensagem
+
+            novoVeiculo.getInfo(); // chama o método getInfo() do veículo
+            
+            bancoVeiculos[indice -1] = novoVeiculo; // atualiza o veículo no array
 
 
+        }
+
+        }
+
+    
+       
+    
 module.exports = {veiculoController}; // exporta o módulo veiculoController
