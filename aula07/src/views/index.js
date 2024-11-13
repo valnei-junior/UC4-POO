@@ -58,7 +58,8 @@ function editarVeiculo(){
     controller.listarVeiculos();
     const indice = parseInt(prompt('Informe o índice do veículo que deseja editar: '));
     const result = controller.buscarId(indice);
-    if (result === true){
+    console.log(result);
+    if (result ){
 
         console.log('Informe os novos dados do veículo:(Pressione enter para manter o valor) ');
 
@@ -95,6 +96,7 @@ function editarVeiculo(){
     }
     }else{
         console.log('Informe um índice válido');
+        return
     }
 }
 
