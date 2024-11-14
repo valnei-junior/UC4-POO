@@ -1,3 +1,3 @@
-const { databaseNotebook } = []
+const databaseNotebook = [];
 
 module.exports =  { databaseNotebook } 

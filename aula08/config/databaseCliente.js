@@ -1,3 +1,3 @@
-const { databaseCliente } = []
+const { databaseCliente } = []; //  Cria um array vazio
 
-module.exports = {databaseCliente}
+module.exports = { databaseCliente };// Exporta a classe Cliente
