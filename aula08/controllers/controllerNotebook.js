@@ -48,42 +48,42 @@ class ControllerNotebook { // Cria a classe controllerNotebook
 
         editarNotebook(numeroDeSerie, novaMarca, novoModelo, novaCor, novoPreco){ // Edita um notebook  
             try {
-                const notebook = this.buscarNotebook(numeroDeSerie);
+                const notebook = this.buscarNotebook(numeroDeSerie); // Busca o notebook pelo número de série
                 if (notebook) {
-                    notebook.marca = novaMarca;
-                    notebook.modelo = novoModelo;
+                    notebook.marca = novaMarca; // Edita a marca do notebook
+                    notebook.modelo = novoModelo;  // Edita o modelo do notebook
                     notebook.cor = novaCor;
                     notebook.setPreco = novoPreco;
                     return notebook;
                 }
 
             } catch (error) {
-                console.error("Erro ao atualizar notebook:", error.message);
+                console.error("Erro ao atualizar notebook:", error.message); // Exibe a mensagem de erro
             }
         }
-        excluirNotebook(numeroDeSerie){
+        excluirNotebook(numeroDeSerie){ //  Exclui um notebook
             try {
-                const notebook = this.buscarNotebook(numeroDeSerie);
+                const notebook = this.buscarNotebook(numeroDeSerie); // Busca o notebook pelo número de série
                 if (notebook) {
-                    const index = databaseNotebook.findINdex(n => n.getNumeroDeSerie === numeroDeSerie);
-                    const notebookRemovido = databaseNotebook.splice(index, 1);
-                    confirm("Notebook excluído com sucesso!", notebookRemovido);
-                    return notebookRemovido;
+                    const index = databaseNotebook.findINdex(n => n.getNumeroDeSerie === numeroDeSerie); // Busca o índice do notebook
+                    const notebookRemovido = databaseNotebook.splice(index, 1); // Remove o notebook
+                    confirm("Notebook excluído com sucesso!", notebookRemovido); // Exibe a mensagem de notebook excluído com sucesso
+                    return notebookRemovido; // Retorna o notebook excluído
                 }
-            } catch (error) {
-                console.error("Erro ao excluir notebook:", error.message);
+            } catch (error) { // Se ocorrer um erro
+                console.error("Erro ao excluir notebook:", error.message); // Exibe a mensagem de erro
             }
         }
 
         excluirTodosNotebook(){
             try {
-                if (databaseNotebook.length > 0) {
-                    databaseNotebook.length = 0;
+                if (databaseNotebook.length > 0) { // Se o banco de dados de notebooks não estiver vazio
+                    databaseNotebook.length = 0;        // Exclui todos os notebooks
                 }
             }catch(error) {
-            console.error("Erro ao excluir todos os notebooks:", error.message);
+            console.error("Erro ao excluir todos os notebooks:", error.message); // Exibe a mensagem de erro
         }
 }
  
 }
-module.exports = { ControllerNotebook }
+module.exports = { ControllerNotebook }; // Exporta a classe ControllerNotebook
